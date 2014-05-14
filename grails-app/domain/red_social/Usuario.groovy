@@ -13,12 +13,7 @@ class Usuario {
 	Boolean activo;
 
 	static hasMany = [mposts:MPost]
-	static hasMany = [usuarios:Usuario]
-	
-
-	static mapping = {
-
-	}
+	static hasMany = [seguidores:Usuario, usuarios_seguidos:Usuario, post_seguidos:MPost]
 
     static constraints = {
     	nombre blank:false;

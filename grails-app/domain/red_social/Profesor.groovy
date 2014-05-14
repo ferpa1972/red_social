@@ -1,6 +1,6 @@
 package red_social
 
-class Profesor {
+class Profesor extends Usuario {
 
     static constraints = {
     }
