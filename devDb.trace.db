@@ -1,0 +1,36 @@
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MPOST_MPOST" no encontrada
+Table "MPOST_MPOST" not found; SQL statement:
+alter table mpost_mpost drop constraint FKD9F8BA5BA92837AF [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MPOST_MPOST" no encontrada
+Table "MPOST_MPOST" not found; SQL statement:
+alter table mpost_mpost drop constraint FKD9F8BA5B141AB1C7 [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_MPOSTS" no encontrada
+Table "USUARIO_MPOSTS" not found; SQL statement:
+alter table usuario_mposts drop constraint FK534871B76EC2DEC7 [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_MPOSTS" no encontrada
+Table "USUARIO_MPOSTS" not found; SQL statement:
+alter table usuario_mposts drop constraint FK534871B7141AB1C7 [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_POST_SEGUIDOS" no encontrada
+Table "USUARIO_POST_SEGUIDOS" not found; SQL statement:
+alter table usuario_post_seguidos drop constraint FK9CE986D6EC2DEC7 [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_POST_SEGUIDOS" no encontrada
+Table "USUARIO_POST_SEGUIDOS" not found; SQL statement:
+alter table usuario_post_seguidos drop constraint FK9CE986D141AB1C7 [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_USUARIO" no encontrada
+Table "USUARIO_USUARIO" not found; SQL statement:
+alter table usuario_usuario drop constraint FKC2627F1DF323478D [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_USUARIO" no encontrada
+Table "USUARIO_USUARIO" not found; SQL statement:
+alter table usuario_usuario drop constraint FKC2627F1D6EC2DEC7 [42102-173]
+05-17 17:30:22 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_USUARIO" no encontrada
+Table "USUARIO_USUARIO" not found; SQL statement:
+alter table usuario_usuario drop constraint FKC2627F1D3A23F1B8 [42102-173]
