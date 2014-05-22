@@ -12,11 +12,9 @@ class Usuario {
     String ciudad
     Boolean activo
 
-<<<<<<< HEAD
-	static hasMany = [mposts:MPost,seguidores:Usuario, usuarios_seguidos:Usuario, post_seguidos:MPost]
-=======
+    static hasMany = [mposts:MPost,seguidores:Usuario, usuarios_seguidos:Usuario, post_seguidos:MPost]
+
     static hasMany = [mposts:MPost, seguidores:Usuario, usuarios_seguidos:Usuario, post_seguidos:MPost]
->>>>>>> 22c51d91a49068251f8d30eccbb428de20889972
 
     static constraints = {
     	nombre blank:false
