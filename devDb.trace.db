@@ -34,3 +34,11 @@ alter table usuario_usuario drop constraint FKC2627F1D6EC2DEC7 [42102-173]
 org.h2.jdbc.JdbcSQLException: Tabla "USUARIO_USUARIO" no encontrada
 Table "USUARIO_USUARIO" not found; SQL statement:
 alter table usuario_usuario drop constraint FKC2627F1D3A23F1B8 [42102-173]
+05-19 20:22:20 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "USUARIO[*] SELECT * FROM MPOST"; se esperaba "UPDATE, {"
+Syntax error in SQL statement "USUARIO[*] SELECT * FROM MPOST"; expected "UPDATE, {"; SQL statement:
+USUARIO SELECT * FROM MPOST [42001-173]
+05-19 20:38:07 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "MPOST_MPOST[*] SELECT * FROM MPOST"; se esperaba "MERGE, {"
+Syntax error in SQL statement "MPOST_MPOST[*] SELECT * FROM MPOST"; expected "MERGE, {"; SQL statement:
+MPOST_MPOST SELECT * FROM MPOST [42001-173]

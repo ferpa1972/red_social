@@ -2,6 +2,10 @@ package red_social
 
 class UsuarioController {
     
+    def index(){
+        render session.usuario_logueado
+    }
+    
     def login(){
         if (request.get) {
             return
@@ -10,8 +14,8 @@ class UsuarioController {
         
         if (usuario) {
             if (usuario.password == params.password) {
-                session.usuario_logueado = usuario
-                render "Bienvenido "+usuario.nombre+" "+usuario.apellido
+                session.usuario_logueado = usuario.nick
+                redirect (controller:"MPost", action:"nuevo")
             }
             else {
                 render(view: "login", model: [error: "La contraseña no es correcta"])
