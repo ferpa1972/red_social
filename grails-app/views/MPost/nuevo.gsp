@@ -25,5 +25,17 @@
         	<textarea name="contenido" rows="5" cols="40"></textarea>
         	<input type="submit" value="Publicar">
         </form>
+        
+        
+        <g:if test="${posts != null}">
+        	<ul>
+	        	<g:each in="${posts}" var="p">
+	        		<li>
+	        			<pre>${p.contenido}</pre>
+	        			<br><g:formatDate format="dd/MM/yyyy HH:mm" date="${p.fecha}"/>
+	        		</li>
+	        	</g:each>
+	        </ul>
+        </g:if>
     </body>
 </html>

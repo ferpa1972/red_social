@@ -3,7 +3,7 @@ package red_social
 class UsuarioController {
     
     def index(){
-        render session.usuario_logueado
+        redirect (action:'perfil')
     }
     
     def login(){
@@ -30,24 +30,21 @@ class UsuarioController {
         session.invalidate()
         redirect(action: "login")
     }
-
-    def listar() {
-        
+    
+    def perfil() {
+        render "Bienvendo "+ session.usuario_logueado.toString()
+		System.out.println "Perfil de "+session.usuario_logueado.toString()
     }
     
-    def mostrar() {
-        
-    }
-    
-    def crear(){
-        
-    }
-    
-    def editar(){
+    def registro(){
+		
         
     }
     
     def borrar(){
-        
+        def usu = Usuario.findByNick(session.usuario_logueado.toString())
+		
+		usu.activo = false
+		usu.save()
     }
 }
