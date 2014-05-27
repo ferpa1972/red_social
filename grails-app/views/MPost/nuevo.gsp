@@ -12,6 +12,10 @@
         <title>Publicar</title>
     </head>
     <body>
+    	<g:form controller="Usuario" action="buscar">
+    		<input name="busqueda">
+    		<input type="submit" value="Buscar">
+    	</g:form>
     	
     	<g:hasErrors bean="${post}">
             <ul>
@@ -32,7 +36,7 @@
 	        	<g:each in="${posts}" var="p">
 	        		<li>
 	        			<pre>${p.contenido}</pre>
-	        			<br><g:formatDate format="dd/MM/yyyy HH:mm" date="${p.fecha}"/>
+	        			<g:formatDate format="dd/MM/yyyy HH:mm" date="${p.fecha}"/>
 	        		</li>
 	        	</g:each>
 	        </ul>

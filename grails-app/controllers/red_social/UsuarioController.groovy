@@ -32,8 +32,8 @@ class UsuarioController {
     }
     
     def perfil() {
-        render "Bienvendo "+ session.usuario_logueado.toString()
 		System.out.println "Perfil de "+session.usuario_logueado.toString()
+        render "Bienvendo "+ session.usuario_logueado.toString()
     }
     
     def registro(){
@@ -47,4 +47,8 @@ class UsuarioController {
 		usu.activo = false
 		usu.save()
     }
+	
+	def buscar(){
+		render 'no implementado todavia'
+	}
 }
