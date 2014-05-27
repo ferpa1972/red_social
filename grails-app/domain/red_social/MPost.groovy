@@ -1,16 +1,15 @@
 package red_social
 
+
 class MPost {
     String contenido
-    int id
     Date fecha
 
-
-    static belongsTo = [creador:Usuario]
-    static hasMany = [respuestas:MPost]
+    static belongsTo = Usuario
+    static hasMany = [respuestas:MPost, seguidores:Usuario]
 
     static constraints = {
-    	id blank:false
+		contenido blank:false, maxSize: 150
     	fecha blank:false
     }
 }
