@@ -4,7 +4,6 @@ class Usuario {
     String nombre
     String nick
     String apellido
-    int id
     String email
     String password
     Date fnac
@@ -14,14 +13,12 @@ class Usuario {
 
     static hasMany = [mposts:MPost,seguidores:Usuario, usuarios_seguidos:Usuario, post_seguidos:MPost]
 
-    static hasMany = [mposts:MPost, seguidores:Usuario, usuarios_seguidos:Usuario, post_seguidos:MPost]
-
     static constraints = {
-    	nombre blank:false
-    	nick blank:false, unique:true
-    	apellido blank:false
-    	id blank:false, unique:true
-    	password blank:false, size:8..30
-    	fnac blank:false
+        nick blank:false, unique:true
+        email email:true
+        password blank:false, size:8..30
+    	//nombre blank:false
+    	//apellido blank:false
+    	//fnac blank:false
     }
 }
