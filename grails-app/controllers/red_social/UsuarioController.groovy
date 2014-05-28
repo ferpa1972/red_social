@@ -37,7 +37,6 @@ class UsuarioController {
     }
     
     def registro(){
-		
         
     }
     
@@ -49,6 +48,20 @@ class UsuarioController {
     }
 	
 	def buscar(){
-		render 'no implementado todavia'
+		
+		def busqueda = params.busqueda
+		
+		def coincidencias_usuarios = Usuario.where {
+			nombre =~ "%"+busqueda+"%" || nick =~ "%"+busqueda+"%" || apellido =~ "%"+busqueda+"%" || pais =~ "%"+busqueda+"%" || ciudad =~ "%"+busqueda+"%"
+		}
+		
+		def coincidencias_posts = MPost.where {
+			contenido =~ "%"+busqueda+"%"
+		}
+		
+		def resultado = [usuarios_encontrados:coincidencias_usuarios.list(), posts_encontrados:coincidencias_posts.list()]
+		
+		
+		[resultado:resultado]
 	}
 }
