@@ -27,7 +27,9 @@ class MPostController {
 				render (view:'nuevo', model:[post:p])
 			}
 		}
-         
+      def seguir(){
+          
+      }
     }
 	
 	def responder(){
