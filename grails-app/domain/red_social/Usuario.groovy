@@ -16,7 +16,7 @@ class Usuario {
     static constraints = {
         nick blank:false, unique:true
         email email:true
-        password blank:false, size:8..30
+        password blank:false, size:3..30
     	nombre blank:false
     	apellido blank:false
     	fnac blank:false
