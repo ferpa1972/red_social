@@ -13,7 +13,7 @@
     </head>
     <body>
     	<g:form controller="Usuario" action="buscar">
-    		<input name="busqueda">
+    		<g:textField name="busqueda"/>
     		<input type="submit" value="Buscar">
     	</g:form>
     	
@@ -25,10 +25,10 @@
             </ul>
         </g:hasErrors>
         
-        <form method="POST" action="/red_social/MPost/crear">
+        <g:form controller="MPost" action="crear">
         	<textarea name="contenido" rows="5" cols="40"></textarea>
         	<input type="submit" value="Publicar">
-        </form>
+        </g:form>
         
         
         <g:if test="${posts != null}">

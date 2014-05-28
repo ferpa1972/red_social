@@ -42,24 +42,29 @@ class UsuarioController {
 	def seguir(){
 		def usuarioSeguir = Usuario.findByNick(params.nick)
 		def usuarioActual = Usuario.findbyNick(session.usuario.logueado.toString())
-		if(usuarioSeguri){
+		if(usuarioSeguir && usuarioActual){
 			usuarioSeguir.addToSeguidores(usuarioActual)
 			usuarioSeguir.save()
-		}
-		if(usuarioActual){
 			usuarioActual.addToUsuarios_seguidos(usuarioSeguir)
 			usuarioActual.save()
 		}
 	}
 
-	def borrar(){
-		def usu = Usuario.findByNick(session.usuario_logueado.toString())
-
-		usu.activo = false
-		usu.save()
-	}
-
 	def buscar(){
-		render 'no implementado todavia'
+		
+		def busqueda = params.busqueda
+		
+		def coincidencias_usuarios = Usuario.where {
+			nombre =~ "%"+busqueda+"%" || nick =~ "%"+busqueda+"%" || apellido =~ "%"+busqueda+"%" || pais =~ "%"+busqueda+"%" || ciudad =~ "%"+busqueda+"%"
+		}
+		
+		def coincidencias_posts = MPost.where {
+			contenido =~ "%"+busqueda+"%"
+		}
+		
+		def resultado = [usuarios_encontrados:coincidencias_usuarios.list(), posts_encontrados:coincidencias_posts.list()]
+		
+		
+		[resultado:resultado]
 	}
 }
