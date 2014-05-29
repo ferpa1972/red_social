@@ -37,5 +37,14 @@ class MPostController {
 			
 		}
 	}
-	
+	def seguir(){
+            def mpostSeguir = Mpost.findById(params.id)
+            def usuarioActual = Usuario.findByNick(session.usuario.logueado.toString)
+            if(mpostSeguir && usuarioActual){
+                mpostSeguir.addToSeguidores(mpostSeguir)
+                mpostSeguir.save()
+                usuarioActual.addToPost_seguidos(usuarioActual)
+                usuarioActual.save()
+            }
+        }
 }
